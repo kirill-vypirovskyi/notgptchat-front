@@ -1,0 +1,51 @@
+
+.Form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  &__input {
+    all: none;
+    height: 50px;
+    width: 550px;
+    background-color: $color-input;
+    border-radius: 15px;
+    border: 1px solid transparent;
+    font-family: inherit;
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: $color-white;
+    transition: 0.3s;
+    outline: none;
+
+    &:hover {
+      scale: 1.1;
+    }
+
+    &:focus {
+      scale: 1.1;
+    }
+  }
+
+  &__button {
+    height: 50px;
+    background-color: $color-accent;
+    font-family: inherit;
+    font-size: 2rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 15px;
+    margin-top: 40px;
+    cursor: pointer;
+    transition: 0.3s;
+    outline: none;
+
+    &:hover {
+      scale: 1.1;
+    }
+
+    &:focus {
+      scale: 1.1;
+    }
+  }
+}

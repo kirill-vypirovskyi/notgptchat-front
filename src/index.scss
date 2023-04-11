@@ -1,0 +1,17 @@
+@import './styles/reset.scss';
+@import './styles/variables.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Caveat', cursive;
+  color: #fff;
+}
+
+@import './App.scss';
+@import './components/Header/Header.scss';
+@import './styles/Form.scss';
+@import './components/LoginSite/LoginSite.scss';
+@import './components/SignupSite/SignupSite.scss';
