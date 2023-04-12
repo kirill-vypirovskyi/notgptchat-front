@@ -46,4 +46,28 @@
       box-shadow: 0 0 20px $color-black;
     }
   }
+
+  &__dropdown {
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    font-family: inherit;
+    font-size: 2.5rem;
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      left: -1rem;
+      top: 50%;
+      display: block;
+      content: '';
+      height: 0.5rem;
+      width: 0.5rem;
+      border-bottom: 3px solid $color-white;
+      border-right: 3px solid $color-white;
+      transform: rotate(45deg) translateY(-50%);
+      
+    }
+  }
 }

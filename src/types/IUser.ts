@@ -1,9 +1,8 @@
 export interface IUser {
-  id: number,
+  // id: number,
   email: string,
   username: string,
-  password: string,
-  createdAt: string,
-  updatedAt: string,
-  activationToken: string | null,
+  // createdAt: string,
+  // updatedAt: string,
+  // activationToken: string | null,
 }

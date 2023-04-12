@@ -8,18 +8,14 @@ const login = ({ email, password }) => {
   return authClient.post('/login', { email, password });
 };
 
-const logout = () => {
-  return authClient.post('/logout');
-};
-
 const activate = (activationToken) => {
   return authClient.get(`/activation/${activationToken}`);
 };
 
-const refresh = () => {
-  return authClient.get('/refresh');
+const checkAuth = (token) => {
+  return authClient.post('/check', { token });
 };
 
 export const authService = {
-  register, activate, login, logout, refresh,
+  register, activate, login, checkAuth,
 };

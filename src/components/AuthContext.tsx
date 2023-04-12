@@ -21,10 +21,10 @@ export const AuthProvider = ({ children }: any) => {
 
   async function checkAuth() {
     try {
-      const { accessToken, user }: any = await authService.refresh();
+      const token = accessTokenService.get();
+      const { user }: any = await authService.checkAuth(token);
 
-      accessTokenService.save(accessToken);
-      setCurrentUser(user);
+      setCurrentUser(user as unknown as IUser);
     } catch (error) {
       window.console.log('User is not authentincated');
     } finally {
@@ -43,8 +43,6 @@ export const AuthProvider = ({ children }: any) => {
   }
 
   async function logout() {
-    await authService.logout();
-
     accessTokenService.remove();
     setCurrentUser(null);
   }

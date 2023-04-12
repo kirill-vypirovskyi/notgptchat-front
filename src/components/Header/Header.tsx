@@ -1,16 +1,21 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useContext, useEffect } from 'react';
 import { AuthContext } from '../AuthContext';
 import { Loader } from '../Loader';
 
 export const Header = () => {
-  const { currentUser, checkAuth, isChecked }: any = useContext(AuthContext);
+  const {
+    currentUser,
+    checkAuth,
+    isChecked,
+    logout,
+  } : any = useContext(AuthContext);
 
   useEffect(() => {
     checkAuth();
   }, []);
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   if (!isChecked) {
     return <Loader />;
@@ -29,11 +34,14 @@ export const Header = () => {
             </>
           ) : (
             <button
+              className="Header__dropdown"
               type="button"
-              onClick={() => navigate('123')}
-              aria-label="log out"
+              onClick={() => {
+                logout();
+              }}
+              aria-label="profile menu"
             >
-              LOGGED IN
+              {currentUser.username}
             </button>
           )}
       </div>
