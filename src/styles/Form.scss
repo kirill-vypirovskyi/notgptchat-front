@@ -2,7 +2,8 @@
 .Form {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
+  position: relative;
 
   &__input {
     all: none;
@@ -15,15 +16,27 @@
     font-size: 2rem;
     padding: 0 1.5rem;
     color: $color-white;
-    transition: 0.3s;
+    transition: scale 0.3s, box-shadow 0.3s;
     outline: none;
-
-    &:hover {
-      scale: 1.1;
-    }
 
     &:focus {
       scale: 1.1;
+      box-shadow: 0 0 30px $color-black;
+    }
+
+    &--error {
+      border-color: $color-danger;
+    }
+  }
+
+  &__input-error-text {
+    color: $color-danger;
+    text-align: right;
+
+    &--invisible {
+      color: transparent;
+      cursor: default;
+      user-select: none;
     }
   }
 
@@ -37,15 +50,30 @@
     border-radius: 15px;
     margin-top: 40px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: scale 0.3s, box-shadow 0.3s;
     outline: none;
 
     &:hover {
       scale: 1.1;
+      box-shadow: 0 0 30px $color-black;
     }
 
     &:focus {
       scale: 1.1;
+      box-shadow: 0 0 30px $color-black;
+    }
+
+    &--loading::after {
+      content: '';
+      position: absolute;
+      right: 1rem;
+      width: 2rem;
+      height: 2rem;
+      border: 3px solid $color-black;
+      border-radius: 50%;
+      border-bottom-color: transparent;
+
+      animation: roll 0.5s linear infinite;
     }
   }
 }

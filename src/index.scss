@@ -1,5 +1,6 @@
 @import './styles/reset.scss';
 @import './styles/variables.scss';
+@import './styles/animations.scss';
 
 * {
   box-sizing: border-box;
@@ -11,7 +12,9 @@ html {
 }
 
 @import './App.scss';
+@import './components/Loader/Loader.scss';
 @import './components/Header/Header.scss';
 @import './styles/Form.scss';
-@import './components/LoginSite/LoginSite.scss';
-@import './components/SignupSite/SignupSite.scss';
+@import './pages/LoginPage/LoginPage.scss';
+@import './pages/SignupPage/SignupPage.scss';
+@import './pages/AccountActivationPage/AccountActivationPage.scss';
