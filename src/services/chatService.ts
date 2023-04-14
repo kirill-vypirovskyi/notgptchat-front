@@ -1,7 +1,8 @@
 import { httpClient } from '../http/httpClient';
+import { ChatForChatsList } from '../types/IChat';
 
-function getAll() {
+const getAll = (): Promise<ChatForChatsList[]> => {
   return httpClient.get('/chats');
-}
+};
 
 export const chatService = { getAll };

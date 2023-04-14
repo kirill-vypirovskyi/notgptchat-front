@@ -3,9 +3,9 @@ import {
   ChangeEvent, FormEvent, useContext, useState,
 } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { EmailErrors, PasswordErrors } from '../../types/FieldErrors';
-import { isEmailValid } from '../../functions/validateForm';
-import { AuthContext } from '../../components/AuthContext';
+import { EmailErrors, PasswordErrors } from '../types/FieldErrors';
+import { isEmailValid } from '../functions/validateForm';
+import { AuthContext } from '../components/AuthContext';
 
 export const LoginPage = () => {
   const [emailQuery, setEmailQuery] = useState('');
@@ -57,7 +57,7 @@ export const LoginPage = () => {
 
     try {
       await login(user);
-      navigate('/main');
+      navigate('/chats');
     } catch (error) {
       window.console.log(error);
     } finally {

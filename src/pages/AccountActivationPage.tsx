@@ -1,8 +1,8 @@
 import { useState, useContext, useEffect } from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
-import { Loader } from '../../components/Loader';
-import { AuthContext } from '../../components/AuthContext';
+import { Loader } from '../components/Loader';
+import { AuthContext } from '../components/AuthContext';
 
 export const AccountActivationPage = () => {
   const [error, setError] = useState('');
@@ -41,7 +41,7 @@ export const AccountActivationPage = () => {
             Your account is now active
           </p>
 
-          <Link to="/main">Go to chats</Link>
+          <Link to="/chats">Go to chats</Link>
         </>
       )}
     </div>

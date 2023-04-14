@@ -1,0 +1,99 @@
+.Chat {
+  width: 100%;
+  display: flex;
+  scroll-behavior: smooth;
+
+  &__window {
+    flex-basis: 66%;
+    position: relative;
+    background-color: $color-dark-secondary;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+
+  &__header {
+    position: absolute;
+    top: -$header-heigth;
+    left: 0;
+    right: 0;
+    height: $header-heigth - 2px;
+    color: $color-accent;
+
+    border-bottom: 4px solid $color-accent;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2rem;
+  }
+
+  &__settings {
+    position: absolute;
+    right: 0;
+  }
+
+  &__messages {
+    @include scrollbar;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    gap: 2rem;
+    padding: 20px 15px;
+  }
+
+  &__form {
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    background-color: $color-input;
+  }
+
+  &__form-input {
+    height: 50px;
+    border: none;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: 1.5rem;
+    color: $color-white;
+    padding: 10px 16px;
+    width: 100%;
+    outline: none;
+    border-bottom: 1px solid transparent;
+
+    &:focus {
+      border-bottom-color: $color-accent;
+    }
+  }
+
+  &__form-button {
+    height: 45px;
+    width: 45px;
+    background-color: $color-accent;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+
+  &__participants {
+    @include scrollbar;
+
+    flex-basis: 34%;
+    padding: 20px;
+  }
+
+  &__participants-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__participants-list {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}

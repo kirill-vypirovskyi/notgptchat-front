@@ -1,0 +1,45 @@
+.Message {
+  max-width: 60%;
+  min-width: 20%;
+  background-color: $color-input;
+  border-radius: 15px;
+  border-top-left-radius: 0;
+  padding: 10px 20px 10px 15px;
+  position: relative;
+  align-self: flex-start;
+
+  &--active {
+    background-color: $color-my-message;
+    
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 0;
+    align-self: flex-end;
+
+    & > .Message__time {
+      bottom: -1rem;
+      top: auto;
+    }
+
+    & > .Message__username {
+      display: none;
+    }
+  }
+
+  &__text {
+    font-size: 1.5rem;
+  }
+
+  &__time {
+    position: absolute;
+    right: 0;
+    top: -1rem;
+    font-size: 0.75rem;
+    color: $color-secondary;
+  }
+
+  &__username {
+    position: absolute;
+    top: -1.2rem;
+    left: 0;
+  }
+}

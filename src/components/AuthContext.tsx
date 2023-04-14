@@ -7,7 +7,7 @@ export const AuthContext = React.createContext({});
 
 export const AuthProvider = ({ children }: any) => {
   const [currentUser, setCurrentUser] = useState<IUser | null>(null);
-  const [isChecked, setChecked] = useState(true);
+  const [isChecked, setChecked] = useState(false);
 
   async function activate(activationToken: string) {
     const {

@@ -1,6 +1,7 @@
-@import './styles/reset.scss';
-@import './styles/variables.scss';
-@import './styles/animations.scss';
+@import './styles/utils/reset.scss';
+@import './styles/utils/variables.scss';
+@import './styles/utils/mixins.scss';
+@import './styles/utils/animations.scss';
 
 * {
   box-sizing: border-box;
@@ -12,9 +13,13 @@ html {
 }
 
 @import './App.scss';
-@import './components/Loader/Loader.scss';
-@import './components/Header/Header.scss';
-@import './styles/Form.scss';
-@import './pages/LoginPage/LoginPage.scss';
-@import './pages/SignupPage/SignupPage.scss';
-@import './pages/AccountActivationPage/AccountActivationPage.scss';
+@import './styles/components/Loader.scss';
+@import './styles/components/Header.scss';
+@import './styles/components/Form.scss';
+@import './styles/components/Message.scss';
+@import './styles/components/ChatsList.scss';
+@import './styles/components/Chat.scss';
+@import './styles/pages/LoginPage.scss';
+@import './styles/pages/SignupPage.scss';
+@import './styles/pages/AccountActivationPage.scss';
+@import './styles/pages/MainPage.scss';

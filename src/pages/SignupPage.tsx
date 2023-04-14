@@ -5,9 +5,9 @@ import {
   PasswordErrors,
   RepeatErrors,
   UsernameErrors,
-} from '../../types/FieldErrors';
-import { isEmailValid, isUsernameValid } from '../../functions/validateForm';
-import { authService } from '../../services/authService';
+} from '../types/FieldErrors';
+import { isEmailValid, isUsernameValid } from '../functions/validateForm';
+import { authService } from '../services/authService';
 
 export const SignupPage = () => {
   const [
